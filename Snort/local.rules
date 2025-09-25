@@ -1,0 +1,8 @@
+# $Id: local.rules,v 1.11 2004/07/23 20:15:44 bmc Exp $
+# ----------------
+# LOCAL RULES
+# ----------------
+# This file intentionally does not come with signatures.  Put your local
+# additions here.
+alert tcp any any -> any 80 (msg:"C2 IP in HTTP Request"; content:"203.0.113.45"; classtype:trojan-activity; sid:1000023; rev:1;)
+alert tcp any any -> $HOME_NET 80 (msg:"C2 Domain in HTTP Host Header"; flow:to_server,established; content:"bad-c2.example.com"; http_header; classtype:trojan-activity; sid:1000024; rev:1;)
