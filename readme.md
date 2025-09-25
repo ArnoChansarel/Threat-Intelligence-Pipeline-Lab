@@ -83,13 +83,9 @@ This establishes the integration between Splunk and OpenCTI.
 From the OpenCTI UI:
 
 Navigate to "Observables" > "Indicators"
-
 Add fake IOCs such as:
-
 IPv4 addresses
-
 Domains
-
 URLs
 
 These will serve as the malicious artifacts for detection.
@@ -100,13 +96,9 @@ To enable data flow to Splunk:
 Go to Settings > Data Sharing > Live Streams
 
 Create a new stream filtering on:
-
 ipv4
-
 domain
-
 url
-
 indicator
 
 Start the stream and copy the Stream ID
