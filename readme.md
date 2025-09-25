@@ -152,10 +152,8 @@ DNS queries to fake domains
 ### 🔁 4. OpenCTI Sighting Created from Splunk
 
 __Alerts__
-
-![alt text](image-7.png)
-![alt text](image-6.png)
-![alt text](image-8.png)
+![alt text](image-15.png)
+![alt text](image-16.png)
 
 __OpenCTI Sightings__
 ![alt text](image-10.png)
