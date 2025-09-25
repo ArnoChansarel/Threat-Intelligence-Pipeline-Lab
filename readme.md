@@ -134,32 +134,32 @@ Make sure to create appropriate indexes in Splunk before ingestion
 Here's the order in which the lab demonstrates IOC detection and correlation:
 
 ### 🔍 1. OpenCTI Threat Intelligence with Fake IOCs
-![alt text](image-14.png)
-![alt text](image.png)
+![alt text](Screenshots/image-14.png)
+![alt text](Screenshots/image.png)
 
 ### 📈 2. Splunk Query Results Matching IOCs
 Matches on fake C2 IPs
-![alt text](image-3.png)
+![alt text](Screenshots/image-3.png)
 
 DNS queries to fake domains
-![alt text](image-1.png)
-![alt text](image-13.png)
+![alt text](Screenshots/image-1.png)
+![alt text](Screenshots/image-13.png)
 
 
 ### 🚨 3. Snort or Zeek Log Samples with IOC Hits
-![alt text](image-4.png)
+![alt text](Screenshots/image-4.png)
 
 ### 🔁 4. OpenCTI Sighting Created from Splunk
 __Creating Alerts__
 
 
-![alt text](image-15.png)
-![alt text](image-16.png)
+![alt text](Screenshots/image-15.png)
+![alt text](Screenshots/image-16.png)
 
 __OpenCTI Sightings__
-![alt text](image-10.png)
-![alt text](image-11.png)
-![alt text](image-12.png)
+![alt text](Screenshots/image-10.png)
+![alt text](Screenshots/image-11.png)
+![alt text](Screenshots/image-12.png)
 
 ## 🧠 Conclusion
 This lab demonstrates a working end-to-end threat intelligence pipeline:
