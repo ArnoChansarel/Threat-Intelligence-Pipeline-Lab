@@ -116,55 +116,50 @@ Enter the Stream ID obtained earlier
 On your Victim VM:
 
 Install Snort and Zeek
-
 Configure rules to detect IOCs (e.g., fake C2 IPs/domains)
 
 On the Attacker VM:
-
 Simulate traffic using:
-
 curl to fake C2 IP
-
 nslookup to fake domains
-
 nmap to simulate port scans
 
 ### 8️⃣ Configure Splunk Forwarding
 Ensure Snort and Zeek logs are forwarded to Splunk:
 
 Set up Universal Forwarder or syslog ingestion
-
 Make sure to create appropriate indexes in Splunk before ingestion
 
 ## ✅ Demonstration of Pipeline
 Here's the order in which the lab demonstrates IOC detection and correlation:
 
 ### 🔍 1. OpenCTI Threat Intelligence with Fake IOCs
-Screenshot of indicators created in OpenCTI
+![alt text](image.png)
 
 ### 📈 2. Splunk Query Results Matching IOCs
-Run searches in Splunk to verify:
-
 Matches on fake C2 IPs
+![alt text](image-3.png)
 
 DNS queries to fake domains
+![alt text](image-1.png)
+![alt text](image-13.png)
 
-### 🚨 3. Snort/Zeek Log Samples with IOC Hits
-Show Snort alerts detecting the simulated traffic
 
-Example:
+### 🚨 3. Snort or Zeek Log Samples with IOC Hits
+![alt text](image-4.png)
 
-```log
-[**] [1:1000001:0] FAKE C2 IP DETECTED [**]
-[Classification: Attempted Information Leak] [Priority: 2]
 ```
 
 ### 🔁 4. OpenCTI Sighting Created from Splunk
-Create a Splunk Alert on IOC match
+Alerts
+![alt text](image-7.png)
+![alt text](image-6.png)
+![alt text](image-8.png)
 
-Configure alert to use "Send to OpenCTI" action
-
-Screenshot showing Sighting in OpenCTI generated from Splunk
+OpenCTI Sightings
+![alt text](image-10.png)
+![alt text](image-11.png)
+![alt text](image-12.png)
 
 ## 🧠 Conclusion
 This lab demonstrates a working end-to-end threat intelligence pipeline:
