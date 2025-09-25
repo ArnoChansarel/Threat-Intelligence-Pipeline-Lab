@@ -134,6 +134,7 @@ Make sure to create appropriate indexes in Splunk before ingestion
 Here's the order in which the lab demonstrates IOC detection and correlation:
 
 ### 🔍 1. OpenCTI Threat Intelligence with Fake IOCs
+![alt text](image-14.png)
 ![alt text](image.png)
 
 ### 📈 2. Splunk Query Results Matching IOCs
