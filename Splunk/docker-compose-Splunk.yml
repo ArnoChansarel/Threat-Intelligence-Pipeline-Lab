@@ -1,0 +1,18 @@
+services:
+  splunk:
+    image: splunk/splunk:9.0.5
+    container_name: splunk
+    restart: unless-stopped
+    environment:
+      SPLUNK_GENERAL_TERMS: "--accept-sgt-current-at-splunk-com"
+      SPLUNK_START_ARGS: --accept-license
+      SPLUNK_PASSWORD: adminadmin
+    ports:
+      - "8000:8000"
+      - "8088:8088"  # HEC port
+      - "9997:9997"  # Forwarder port
+    volumes:
+      - splunk_data:/opt/splunk/var
+
+volumes:
+  splunk_data:
