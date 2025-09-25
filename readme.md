@@ -73,8 +73,8 @@ Add the following manually:
 proxy_password = ******
 
 [additional_parameters]
-opencti_api_key = e1e663ab-7e53-4379-b4e1-6611217b0d07
-opencti_url = http://192.168.56.108:8080
+opencti_api_key = <OPENCTI API KEY>
+opencti_url = http://<LOCAL SERVER IP>:8080
 ```
 
 This establishes the integration between Splunk and OpenCTI.
