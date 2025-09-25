@@ -130,14 +130,14 @@ Ensure Snort and Zeek logs are forwarded to Splunk:
 Set up Universal Forwarder or syslog ingestion
 Make sure to create appropriate indexes in Splunk before ingestion
 
-## ✅ Demonstration of Pipeline
+## Demonstration of Pipeline
 Here's the order in which the lab demonstrates IOC detection and correlation:
 
-### 🔍 1. OpenCTI Threat Intelligence with Fake IOCs
+### 1. OpenCTI Threat Intelligence with Fake IOCs
 ![alt text](Screenshots/image-14.png)
 ![alt text](Screenshots/image.png)
 
-### 📈 2. Splunk Query Results Matching IOCs
+### 2. Splunk Query Results Matching IOCs
 Matches on fake C2 IPs
 ![alt text](Screenshots/image-3.png)
 
@@ -146,10 +146,10 @@ DNS queries to fake domains
 ![alt text](Screenshots/image-13.png)
 
 
-### 🚨 3. Snort or Zeek Log Samples with IOC Hits
+### 3. Snort or Zeek Log Samples with IOC Hits
 ![alt text](Screenshots/image-4.png)
 
-### 🔁 4. OpenCTI Sighting Created from Splunk
+### 4. OpenCTI Sighting Created from Splunk
 __Creating Alerts__
 
 
@@ -161,7 +161,7 @@ __OpenCTI Sightings__
 ![alt text](Screenshots/image-11.png)
 ![alt text](Screenshots/image-12.png)
 
-## 🧠 Conclusion
+## Conclusion
 This lab demonstrates a working end-to-end threat intelligence pipeline:
 
 OpenCTI serves as the central IOC management platform
@@ -175,4 +175,4 @@ Sightings are pushed back into OpenCTI for threat context
 This approach provides real-time detection, correlation, and threat enrichment across multiple platforms in a modular, containerized environment.
 
 ***BONUS***
-"<ADD CALDERA DOCUMENTATION HERE>"
+ADD CALDERA DOCUMENTATION HERE
