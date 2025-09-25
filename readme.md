@@ -26,7 +26,7 @@ This lab uses **Docker** containers to host each of the following components:
 - **Snort** (Intrusion Detection System)
 - Two Linux VMs:
   - **Attacker VM** – Simulates malicious traffic.
-  - **Victim VM** – Monitored by Zeek/Snort.
+  - **Target VM** – Monitored by Zeek/Snort.
 
 ---
 
@@ -113,7 +113,7 @@ Enter the Stream ID obtained earlier
 ✅ You should now see the OpenCTI Dashboard in Splunk, reflecting the indicators you've created.
 
 ### 7️⃣ Install Snort & Zeek
-On your Victim VM:
+On your Target VM:
 
 Install Snort and Zeek
 Configure rules to detect IOCs (e.g., fake C2 IPs/domains)
@@ -127,8 +127,8 @@ nmap to simulate port scans
 ### 8️⃣ Configure Splunk Forwarding
 Ensure Snort and Zeek logs are forwarded to Splunk:
 
-Set up Universal Forwarder or syslog ingestion
-Make sure to create appropriate indexes in Splunk before ingestion
+Set up Universal Forwarder or syslog ingestion.
+Make sure to create appropriate indexes in Splunk before ingestion.
 
 ## Demonstration of Pipeline
 Here's the order in which the lab demonstrates IOC detection and correlation:
