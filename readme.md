@@ -149,8 +149,6 @@ DNS queries to fake domains
 ### 🚨 3. Snort or Zeek Log Samples with IOC Hits
 ![alt text](image-4.png)
 
-```
-
 ### 🔁 4. OpenCTI Sighting Created from Splunk
 Alerts
 ![alt text](image-7.png)
