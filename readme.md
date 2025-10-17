@@ -176,4 +176,68 @@ This approach provides real-time detection, correlation, and threat enrichment a
 
 ***BONUS***
 
-ADD CALDERA DOCUMENTATION HERE
+# Caldera
+
+## Overview
+
+**Caldera** is an open-source cybersecurity platform developed by MITRE and designed to automate adversary emulation, red teaming, and defensive testing. It provides a flexible framework where security teams can simulate real-world attack techniques—based on the MITRE ATT&CK framework—against their environments to evaluate detection and response capabilities. By using plug-ins and customizable agents, Caldera enables users to test specific tactics, techniques, and procedures (TTPs) in a controlled way, helping organizations identify gaps, strengthen defenses, and continuously improve their security posture without requiring manual execution of every test.
+
+## Installation
+
+```bash
+git clone https://github.com/mitre/caldera.git --recursive
+cd caldera
+docker build --build-arg WIN_BUILD=false . -t caldera:server
+docker run -p 8888:8888 caldera:server --insecure
+```
+
+**Credentials**: `admin` / `admin`
+
+## The Custom Ability Stack
+
+### Initial Discovery (T1057, T1082, T1016)
+
+- **T1057** | Process Discovery via `ps >> /tmp/loot.txt; ps aux >> /tmp/loot.txt`
+- **T1082** | System Discovery (custom) via `uname -a ; lsblk ;`
+- **T1016** | Network Discovery via `ip addr ; ip neigh ; netstat ;`
+
+### Credential Access (T1003, T1552)
+
+- **T1003** | OS Credentials Dumping via `/etc/passwd`, `/etc/shadow`
+- **T1552** | Discover Private SSH keys via `find / -name id_rsa`
+
+### Exfiltration (T1048)
+
+- **T1048** | Exfiltrate Data HTTP via `curl`
+
+## The Caldera Components
+
+### Agent
+
+A lightweight software component that runs on a target system and executes commands sent by the Caldera server. It acts like a simulated attacker's foothold, allowing the platform to carry out various attack techniques safely for testing purposes.
+
+![alt text](Screenshots/Caldera/image.png)
+![alt text](Screenshots/Caldera/image-1.png)
+
+*An agent and its related script running on the target*
+
+### Ability
+
+A specific action or tactic that an agent can perform, such as collecting files, creating processes, or escalating privileges. Each ability is mapped to a MITRE ATT&CK technique, making it easy to simulate realistic adversary behavior.
+
+### Adversary
+
+A predefined or custom profile that combines multiple abilities to mimic the behavior of a real-world attacker. Adversaries allow teams to simulate complex attack campaigns without manually triggering each ability.
+
+![alt text](Screenshots/Caldera/image-2.png)
+![alt text](Screenshots/Caldera/image-3.png)
+
+*The custom Ability stack and the detailed Discover Private SSH Key ability*
+
+### Operation
+
+The execution of an adversary plan against one or more agents. It orchestrates the selected adversary's abilities in a controlled sequence, enabling security teams to assess how well their defenses detect and respond to attacks.
+
+![alt text](Screenshots/Caldera/image-4.png)
+
+*The running Operation and its Ability stack*
