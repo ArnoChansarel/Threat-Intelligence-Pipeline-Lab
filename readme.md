@@ -1,5 +1,5 @@
 # Threat Intelligence Pipeline: OpenCTI ➜ Splunk ➜ Zeek/Snort 
-## I. Rationale & Scope
+## I. Project Presentation
 
 This project outlines a **threat intelligence pipeline** designed to push **Indicators of Compromise (IOCs)** from the central **OpenCTI** platform into real-time detection systems like **Splunk**, **Zeek**, and **Snort**. 
 The walkthrough covers the full cycle: 
@@ -146,18 +146,6 @@ __OpenCTI Sightings__
 
 ---
 
-## Conclusion
-This lab demonstrates a working end-to-end threat intelligence pipeline:
-
-* OpenCTI serves as the central IOC management platform.
-* Splunk ingests threat intelligence and logs from detection tools.
-* Zeek and Snort provide low-level detection of malicious traffic.
-* Sightings are pushed back into OpenCTI for threat context.
-
-This approach provides real-time detection, correlation, and threat enrichment across multiple platforms in a modular, containerized environment.
-
-***
-
 # IV. Adversary Emulation with MITRE Caldera
 
 ## Overview
@@ -203,3 +191,17 @@ A predefined or custom profile that combines multiple abilities to mimic the beh
 The execution of an adversary plan against one or more agents. It orchestrates the selected adversary's abilities in a controlled sequence, enabling security teams to assess how well their defenses detect and respond to attacks. 
 ![alt text](Screenshots/Caldera/image-4.png) 
 *The running Operation and its Ability stack*
+
+---
+
+## Conclusion
+This lab demonstrates a working end-to-end threat intelligence pipeline:
+
+* OpenCTI serves as the central IOC management platform.
+* Splunk ingests threat intelligence and logs from detection tools.
+* Zeek and Snort provide low-level detection of malicious traffic.
+* Sightings are pushed back into OpenCTI for threat context.
+
+This approach provides real-time detection, correlation, and threat enrichment across multiple platforms in a modular, containerized environment.
+
+***
